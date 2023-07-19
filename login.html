@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up</title>
+        <link rel="stylesheet" href="signcss.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>O-Community</h1>
+        </div>
+        <div class="login-form">
+            <h2>Log in O-Community</h2>
+            <input type="text" id="email" placeholder="Email or Phone number">
+            <input type="password" id="password" placeholder="Password">
+            <button class="login-button" onclick="login()">Log in</button>
+            <a href="changepwd.html" class="forgot-account">Forgot your account?</a>
+            <div class="separator">
+                <span class="line"></span>
+                <span class="or">OR</span>
+                <span class="line"></span>
+            </div>
+            <br>
+            <button class="create-account-button" type="submit">Create Account</button>
+        </div>
+
+        <div id="successMessage" style="display: none;">
+            <h3>Login Successful!</h3>
+        </div>
+    
+        <script>
+            function login() {
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+    
+                var data = {
+                    email: email,
+                    password: password
+                };
+    
+                fetch("http://localhost:5000/api/user/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Login failed");
+                    }
+                    alert('Login successful');
+                })
+                .catch(error => {
+                    alert("Login failed!! Please check your email and password and try again ");
+                    console.error(error);
+                });
+            }
+        </script>
+    </body>
+</html>

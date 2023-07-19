@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('font/inter/Inter-Regular.otf'); 
+}
+body {
+    background-color: #f1f1f1;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: orange;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: white;
+    margin: 0;
+}
+
+.content {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.content h2 {
+    font-size: 24px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+}
+
+table td {
+    font-size: 14px;
+    color: #333;
+}
+.back-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.send-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}

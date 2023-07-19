@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>O-Community</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="aboutus.css">
+        <link rel="stylesheet" href="signcss.css">
+    </head>
+    <body>
+        <div class="fullscreen-div">
+            <!--the nav bar-->
+            <div class="navbar">
+                <div class="navbar">
+                    <div class="logo">O-Community</div>
+                    <a href="#id4" class="nav-item about-us">About us</a>
+                    <a href="" class="nav-item news">News</a>
+                    <a href="#id2" class="nav-item posts">Posts</a>
+                    <a href="#id1" class="nav-item contacts">Contacts</a>
+                    <div class="login">
+                        <div class="dropdown">
+                            <button class="dropbtn">Log in</button>
+                            <div class="dropdown-content">
+                                <a href="login.html">Log in</a>
+
+                                <a href="logout.html">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sign">
+                        <a href="#id3" class="nav-item sign_up">Sign up</a>
+                    </div>
+                </div>
+            </div>
+            <!--the background image-->
+            <div class="background-image"></div>
+            <div class="challenge">
+                Small Effort Make Big Change
+            </div>
+            <div class="rectangle">
+            </div>
+            <div class="social">
+                Social News Hotspots
+            </div>
+            <div class="image-container">
+                <img class="image1" src="image/bear.jpg" alt="bear">
+                <p class="imgtext1">The power of vulnerability</p>
+            </div>
+            <div class="image-container">
+                <img class="image2" src="image/people.png" alt="pic2">
+                <p class="imgtext2">Your body language may
+                    shape who you are</p>
+            </div>
+            <div class="image-container">
+                <img class="image3" src="image/shark.png" alt="pic3">
+                <p class="imgtext3">The future we're building --
+                    and boring</p>
+            </div>
+            <form class="blog">
+                <div class="top-buttons">
+                    <button class="blog-button">Status</button>
+                    <button class="blog-button" style="background-color:
+                        yellow;">Blogpost</button>
+                    <button class="blog-button">Poll</button>
+                </div>
+                <textarea class="blog-textarea"></textarea>
+                <div class="bottom-buttons">
+                    <button class="discard-button">Discard</button>
+                    <button type="submit" class="post-button">Post</button>
+                </div>
+            </form>
+
+            <div class="blog-share">
+                <div class="header">
+                    <img class="avatar" src="image/sunset.png" alt="Avatar">
+                    <div class="info">
+                        <h2>user
+                        </h2>
+                        <p>2 minuite ago</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>This talk was presented at an official TED conference.
+                        TED's editors chose to feature it for you. </p>
+                    <img class="image" src="image/sunset.png" alt="Image">
+                </div>
+                <div class="interactions">
+                    <div class="likes-comments-shares">
+                        <span class="heart">❤️</span>
+                        <p style="margin-left:1145px;">2 comments 1 share</p>
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <button class="blog-button2">👍React</button>
+                    <button class="blog-button2">🐱Comment</button>
+                    <button class="blog-button2">🐸Share</button>
+                </div>
+            </div>
+            
+            
+        <div class="blog-share2">
+            <div class="header">
+                <h1 id="id1">O-Community</h1>
+            </div>
+            <div class="content">
+                <h2>Contact Us</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Enter message">
+                        </textarea>
+                    </div>
+                    <button class="send-button" type="submit">Send</button>
+    
+                </form>
+                <br>
+                <button class="back-button"
+                    onclick="window.location.href='index.html'">back
+                    to home </button>
+            </div>
+    
+
+            <!--sign up-->
+            <form id="sign_up">
+            <div class="login-form">
+                <h2 id="id3">Create a new account</h2>
+                <!-- <div class="input-wrapper"> -->
+                    <input type="text" id="form_name" placeholder="Name" >
+                    <!-- <input type="text" placeholder="Last name" style="width:
+                        130px;"> -->
+                <!-- </div> -->
+                <input type="text" id="form_email" placeholder="Email">
+                <input type="password" id="form_password" placeholder=" Create Password">
+                <button class="create-account-button" type="submit">Registration</button>
+                <br>
+                <br>
+                <a href="login.html" style="text-decoration: none; color: orange;">Already
+                    have an account ? </a>
+            </div>
+            </form>
+            <div id="signup-message" style="display: none;"></div>
+            <!-- <div>
+                <form id="sign_up">
+                    <input type="text" id="form_name" placeholder="Name" />
+                    <input type="text" id="form_email" placeholder="Email" />
+                    <input type="password" id="form_password" placeholder=" Create Password" />
+                    <!-- <button class="create-account-button" type="submit">Registration</button> -->
+                    <!-- <input type="submit" value="Submit">
+                  </form> -->
+            <!-- </div>                                                                                                                                                           --> -->
+            <div class="header">
+                <h1 id="id2">O-Community</h1>
+            </div>
+            <div class="content">
+                <h2>Create a Post</h2>
+                <form enctype="multipart/form-data" action="your-backend-url"
+                    method="POST">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title"
+                            placeholder="Enter the title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content:</label>
+                        <textarea id="content" name="content" rows="5"
+                            placeholder="Enter the content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">click me to select your image</label>
+                        <input type="file" id="image" name="image">
+                    </div>
+                    <button class="submit-button" type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="header" id="id4">
+                <h1>Welcome to Our Social Awareness Platform</h1>
+            </div>
+            <div class="content">
+                <h2>Project Overview</h2>
+                <p>This project is all about developing a Social Awareness Platform
+                    exclusively for university students across Australia. Our main
+                    goal is to create a centralized space where students can engage
+                    in discussions, share valuable resources, and raise awareness
+                    about various social issues. We also provide a platform for
+                    small business owners to promote their businesses and generate
+                    leads, offering information closely related to students' studies
+                    and daily lives. This includes social training, internship
+                    opportunities, and the latest industry news. By combining social
+                    events and small business outreach, we aim to foster community
+                    engagement and support among Australian university students
+                    while encouraging economic growth.</p>
+    
+                <h2>Project Scope</h2>
+                <p>Our project scope involves the development of a single-page
+                    web-based social awareness site with the following features:</p>
+                <table>
+                    <tr>
+                        <th>Goal</th>
+                        <th>Description</th>
+                        <th>In/Out</th>
+                    </tr>
+                    <tr>
+                        <td>User Registration and Authentication</td>
+                        <td>Provide secure user registration and authentication
+                            systems to protect user information.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>User Login and Logoff</td>
+                        <td>Enable users to log in and log off from the website.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>User Profiles</td>
+                        <td>Allow users to define personal information and access
+                            features like changing passwords.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Homepage with Campaigns</td>
+                        <td>Create a visually appealing homepage that integrates
+                            social cognition information.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Discussion Platform</td>
+                        <td>Enable users to engage in conversations and share ideas
+                            for further cooperation.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Case Release and Reply</td>
+                        <td>Allow users to create and share social causes and
+                            related information.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Resource Sharing</td>
+                        <td>Provide a platform for users to share educational
+                            resources (articles, videos, documents, links) about
+                            social issues and causes.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Notifications and Alerts</td>
+                        <td>Notify users about important information or the latest
+                            consultations.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Security and Privacy</td>
+                        <td>Ensure the protection of user data and compliance with
+                            relevant privacy regulations.</td>
+                        <td>In</td>
+                    </tr>
+                    <tr>
+                        <td>Advertisement</td>
+                        <td>Generate revenue for web pages through advertising and
+                            facilitate the discovery of potential users.</td>
+                        <td>Out</td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+        
+          
+    
+        </div>
+
+     
+    </body>
+    <script>
+        // JavaScript code for dropping the menu
+        document.addEventListener("DOMContentLoaded", function() {
+          var dropdowns = document.getElementsByClassName("dropdown");
+          for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.querySelector(".dropdown-content");
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+            });
+          }
+        });
+      
+        // Scroll to content
+        document.addEventListener("DOMContentLoaded", function() {
+          var links = document.querySelectorAll(".nav-item");
+          links.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+              event.preventDefault(); // Prevent the default action
+              var target = document.getElementById(this.getAttribute("href").substring(1)); // Get the target element
+              var topPos = window.pageYOffset + target.getBoundingClientRect().top; // Get its position relative to the viewport
+      
+              // Initiate scrolling
+              window.scrollTo({
+                top: topPos,
+                behavior: "smooth"
+              });
+            });
+          });
+        });
+      
+        // Signup
+     
+document.addEventListener("DOMContentLoaded", function() {
+  
+  function handleSignup(event) {
+    event.preventDefault(); 
+
+    
+    var nameValue = document.querySelector("#form_name");
+    
+    var emailValue = document.querySelector("#form_email");
+    var passwordValue = document.querySelector("#form_password");
+
+    
+    var User = {
+      name: nameValue.value,
+      email: emailValue.value,
+      password: passwordValue.value
+    };
+
+   
+    fetch("http://localhost:5000/api/user/signup", { 
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(User)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); 
+        alert('Signup successful')
+        
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+
+  
+  var signupForm = document.querySelector("#sign_up");
+  signupForm.addEventListener("submit", handleSignup);
+});
+
+      </script>
+      
+</html>
