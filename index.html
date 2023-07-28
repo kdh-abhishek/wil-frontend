@@ -2,102 +2,126 @@
 <html>
     <head>
         <title>O-Community</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="aboutus.css">
         <link rel="stylesheet" href="signcss.css">
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
     <body>
-        <div class="fullscreen-div">
-            <!--the nav bar-->
-            <div class="navbar">
-                <div class="navbar">
-                    <div class="logo">O-Community</div>
-                    <a href="#id4" class="nav-item about-us">About us</a>
-                    <a href="" class="nav-item news">News</a>
-                    <a href="#id2" class="nav-item posts">Posts</a>
-                    <a href="#id1" class="nav-item contacts">Contacts</a>
-                    <div class="login">
-                        <div class="dropdown">
-                            <button class="dropbtn">Log in</button>
-                            <div class="dropdown-content">
-                                <a href="login.html">Log in</a>
-
-                                <a href="logout.html">Log out</a>
-                            </div>
+        <!--the nav bar-->
+        <div class="navbar">
+            <div class="logo">O-Community</div>
+            <div class="bar-item">
+                <a href="#id4" class="nav-item about-us">About us</a>
+                <a href="" class="nav-item news">News</a>
+                <a href="#id2" class="nav-item posts">Posts</a>
+                <a href="#id1" class="nav-item contacts">Contacts</a>
+                <div class="login nav-item">
+                    <div class="dropdown">
+                        <a class="dropbtn" id="logined">Log in</a>
+                        <div class="dropdown-content" id="drop-menu">
+                            <a href="login.html">Log in</a>
+                            <a href="logout.html" id="log-out">Log out</a>
                         </div>
                     </div>
+                </div>
+                <div class="nav-item">
                     <div class="sign">
                         <a href="#id3" class="nav-item sign_up">Sign up</a>
                     </div>
                 </div>
             </div>
-            <!--the background image-->
-            <div class="background-image"></div>
-            <div class="challenge">
-                Small Effort Make Big Change
+        </div>
+        <section class="swiper carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/background.png" alt="" class="carousel-img">
+                    <span class="carousel-tootip">Small Effort Make Big Change</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/background.png" alt="" class="carousel-img">
+                    <span class="carousel-tootip">Small Effort Make Big Change</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/background.png" alt="" class="carousel-img">
+                    <span class="carousel-tootip">Small Effort Make Big Change</span>
+                </div>
             </div>
+            <!--  if need pagenation-->
+            <div class="swiper-pagination"></div>
+            <!-- if need Navigation button -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+
+
+        <div class="fullscreen-div">            
             <div class="rectangle">
-            </div>
-            <div class="social">
-                Social News Hotspots
-            </div>
-            <div class="image-container">
-                <img class="image1" src="image/bear.jpg" alt="bear">
-                <p class="imgtext1">The power of vulnerability</p>
-            </div>
-            <div class="image-container">
-                <img class="image2" src="image/people.png" alt="pic2">
-                <p class="imgtext2">Your body language may
-                    shape who you are</p>
-            </div>
-            <div class="image-container">
-                <img class="image3" src="image/shark.png" alt="pic3">
-                <p class="imgtext3">The future we're building --
-                    and boring</p>
-            </div>
-            <form class="blog">
-                <div class="top-buttons">
-                    <button class="blog-button">Status</button>
-                    <button class="blog-button" style="background-color:
-                        yellow;">Blogpost</button>
-                    <button class="blog-button">Poll</button>
+                <div class="social">
+                    Social News Hotspots
                 </div>
-                <textarea class="blog-textarea"></textarea>
-                <div class="bottom-buttons">
-                    <button class="discard-button">Discard</button>
-                    <button type="submit" class="post-button">Post</button>
-                </div>
-            </form>
-
-            <div class="blog-share">
-                <div class="header">
-                    <img class="avatar" src="image/sunset.png" alt="Avatar">
-                    <div class="info">
-                        <h2>user
-                        </h2>
-                        <p>2 minuite ago</p>
+                <div class="container" id="campaign">
+                    <div class="image-container">
+                        <img class="image" src="image/bear.jpg" alt="bear">
+                        <p class="imgtext">The power of vulnerability</p>
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="image/people.png" alt="people">
+                        <p class="imgtext">Your body language may
+                            shape who you are</p>
+                    </div>
+                    <div class="image-container">
+                        <img class="image" src="image/shark.png" alt="shark">
+                        <p class="imgtext">The future we're building --
+                            and boring</p>
                     </div>
                 </div>
-                <div class="content">
-                    <p>This talk was presented at an official TED conference.
-                        TED's editors chose to feature it for you. </p>
-                    <img class="image" src="image/sunset.png" alt="Image">
-                </div>
-                <div class="interactions">
-                    <div class="likes-comments-shares">
-                        <span class="heart">❤️</span>
-                        <p style="margin-left:1145px;">2 comments 1 share</p>
-                    </div>
+            </div>
+        </div>
+        <form class="blog">
+            <div class="top-buttons">
+                <button class="blog-button">Status</button>
+                <button class="blog-button" style="background-color:
+                    yellow;">Blogpost</button>
+                <button class="blog-button">Poll</button>
+            </div>
+            <textarea class="blog-textarea" placeholder="Hi, share your post here..."></textarea>
+            <div class="bottom-buttons">
+                <button class="discard-button" id="discard">Discard</button>
+                <button type="submit" class="post-button" id="post">Post</button>
+            </div>
+        </form>
 
-                </div>
-                <div class="buttons">
-                    <button class="blog-button2">👍React</button>
-                    <button class="blog-button2">🐱Comment</button>
-                    <button class="blog-button2">🐸Share</button>
+        <div class="blog-share" id="blog-share">
+            <div class="header">
+                <img class="avatar" src="image/sunset.png" alt="Avatar">
+                <div class="info">
+                    <h2>user
+                    </h2>
+                    <p>2 minuite ago</p>
                 </div>
             </div>
-            
-            
+            <div class="content" id="blog-content">
+                <p>This talk was presented at an official TED conference.
+                    TED's editors chose to feature it for you. </p>
+                <img class="image" src="image/sunset.png" alt="Image">
+            </div>
+            <div class="interactions">
+                <div class="likes-comments-shares">
+                    <span class="heart">❤️&nbsp; &nbsp; 26</span>
+                    <p"><span>2</span> comments &nbsp;<span>1</span> share</p>
+                </div>
+
+            </div>
+            <div class="buttons">
+                <button class="blog-button2">👍React</button>
+                <button class="blog-button2">🐱Comment</button>
+                <button class="blog-button2">🐸Share</button>
+            </div>
+        </div>
+        
         <div class="blog-share2">
             <div class="header">
                 <h1 id="id1">O-Community</h1>
@@ -126,33 +150,24 @@
     
 
             <!--sign up-->
-            <form id="sign_up">
-            <div class="login-form">
-                <h2 id="id3">Create a new account</h2>
-                <!-- <div class="input-wrapper"> -->
-                    <input type="text" id="form_name" placeholder="Name" >
-                    <!-- <input type="text" placeholder="Last name" style="width:
-                        130px;"> -->
-                <!-- </div> -->
-                <input type="text" id="form_email" placeholder="Email">
-                <input type="password" id="form_password" placeholder=" Create Password">
-                <button class="create-account-button" type="submit">Registration</button>
-                <br>
-                <br>
-                <a href="login.html" style="text-decoration: none; color: orange;">Already
-                    have an account ? </a>
-            </div>
+            <form action="" id="signup-form">
+                <div class="login-form">
+                    <h2 id="id3">Create a new account</h2>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="First name" id="signup-firstName" style="width:
+                            130px;">
+                        <input type="text" placeholder="Last name" id="signup-lastName" style="width:
+                            130px;">
+                    </div>
+                    <input type="text" placeholder="Email or Phone number" id="signup-email">
+                    <input type="password" placeholder=" Create Password" id="signup-password">
+                    <button class="create-account-button" type="submit">Registration</button>
+                    <br>
+                    <br>
+                    <a href="login.html" style="text-decoration: none; color: orange;">Already
+                        have an account ? </a>
+                </div>
             </form>
-            <div id="signup-message" style="display: none;"></div>
-            <!-- <div>
-                <form id="sign_up">
-                    <input type="text" id="form_name" placeholder="Name" />
-                    <input type="text" id="form_email" placeholder="Email" />
-                    <input type="password" id="form_password" placeholder=" Create Password" />
-                    <!-- <button class="create-account-button" type="submit">Registration</button> -->
-                    <!-- <input type="submit" value="Submit">
-                  </form> -->
-            <!-- </div>                                                                                                                                                           --> -->
             <div class="header">
                 <h1 id="id2">O-Community</h1>
             </div>
@@ -270,93 +285,309 @@
 
 
         </div>
-
-        
-          
-    
-        </div>
-
      
     </body>
     <script>
-        // JavaScript code for dropping the menu
-        document.addEventListener("DOMContentLoaded", function() {
-          var dropdowns = document.getElementsByClassName("dropdown");
-          for (var i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function() {
-              this.classList.toggle("active");
-              var dropdownContent = this.querySelector(".dropdown-content");
-              if (dropdownContent.style.display === "block") {
+        // 用户信息、活动、日志
+        var name = ''
+        var campaigns = []
+        var blogs = []
+document.addEventListener("DOMContentLoaded",()=>{
+    let userId = localStorage.getItem("user")
+    if(!userId) return
+    let users = JSON.parse(localStorage.getItem("users"))
+    if(users) {
+        users.forEach(user=>{
+            // debugger
+            if(user._id === userId) {
+                campaigns = user.campaigns
+                blogs = user.blogs
+                name = user.name
+            }
+        })
+        let logined = document.querySelector("#logined")
+        let dropMenu = document.querySelector("#drop-menu")
+        logined.innerHTML = name
+        // console.log(dropMenu.children)
+        dropMenu.children[0].style.display = 'none'
+        // dropMenu.classList.add("hidden")
+    }
+})
+let logOut = document.querySelector("#log-out")
+// 登出
+logOut.addEventListener("click",(ev)=>{
+    ev.preventDefault()
+    let user = localStorage.getItem("user")
+    if(!user) return
+    localStorage.clear()
+    let logined = document.querySelector("#logined")
+    logined.innerHTML = "Log in"
+    let dropMenu = document.querySelector("#drop-menu")
+    dropMenu.children[0].style.display = 'block'
+    location.reload()
+})
+        // JavaScript code which using it to drop the menu
+document.addEventListener("DOMContentLoaded", function() {
+    var dropdowns = document.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.querySelector(".dropdown-content");
+            if (dropdownContent.style.display === "block") {
                 dropdownContent.style.display = "none";
-              } else {
+            } else {
                 dropdownContent.style.display = "block";
-              }
-            });
-          }
+            }
         });
-      
-        // Scroll to content
-        document.addEventListener("DOMContentLoaded", function() {
-          var links = document.querySelectorAll(".nav-item");
-          links.forEach(function(link) {
-            link.addEventListener("click", function(event) {
-              event.preventDefault(); // Prevent the default action
-              var target = document.getElementById(this.getAttribute("href").substring(1)); // Get the target element
-              var topPos = window.pageYOffset + target.getBoundingClientRect().top; // Get its position relative to the viewport
-      
-              // Initiate scrolling
-              window.scrollTo({
+    }
+});
+
+//scroll content
+
+document.addEventListener("DOMContentLoaded", function() {
+    var links = document.querySelectorAll(".nav-item");
+    var login = document.querySelectorAll(".dropdown")
+    
+    // links.push(document.querySelectorAll(".dropdown"))
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            let reg = /\.html$/.test(event.target.getAttribute("href"))
+            let content = event.target.innerText
+            if(reg || content.toLocaleLowerCase() == "log in") return
+            event.preventDefault(); // prevent the default action
+            var target = document.getElementById(this.getAttribute('href').substring(1)); // get the target element
+            var topPos = window.pageYOffset + target.getBoundingClientRect().top; // get its position relative to the viewport
+
+            // initiate scrolling
+            window.scrollTo({
                 top: topPos,
                 behavior: "smooth"
-              });
             });
-          });
         });
-      
-        // Signup
+    });
+});
+ // Signup
      
-document.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("DOMContentLoaded", function() {
   
-  function handleSignup(event) {
-    event.preventDefault(); 
+    function handleSignup(event) {
+  event.preventDefault();
 
-    
-    var nameValue = document.querySelector("#form_name");
-    
-    var emailValue = document.querySelector("#form_email");
-    var passwordValue = document.querySelector("#form_password");
+  var firstName = document.querySelector("#signup-firstName").value;
+  var lastName = document.querySelector("#signup-lastName").value;
+  var nameValue = firstName + " " + lastName;
 
-    
-    var User = {
-      name: nameValue.value,
-      email: emailValue.value,
-      password: passwordValue.value
-    };
+  var emailValue = document.querySelector("#signup-email").value;
+  var passwordValue = document.querySelector("#signup-password").value;
 
-   
-    fetch("https://wil-backend-ocnh.vercel.app/api/user/signup", { 
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(User)
+  var User = {
+    name: nameValue,
+    email: emailValue,
+    password: passwordValue
+  };
+
+  fetch("https://wil-backend-ocnh.vercel.app/api/user/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(User)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Signup failed");
+      }
+      return response.json();
     })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); 
-        alert('Signup successful')
-        
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-  }
-
-  
-  var signupForm = document.querySelector("#sign_up");
+    .then(data => {
+      console.log(data);
+      alert('Signup successful');
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Signup failed!! Please try again later.");
+    });
+}
+var signupForm = document.querySelector("#signup-form");
   signupForm.addEventListener("submit", handleSignup);
 });
 
-      </script>
-      
+
+
+
+// let campaignListData = []           // There is no excuse to return data for the time being. It is occupied here.
+document.addEventListener("DOMContentLoaded",(ev)=>{
+    
+    
+    let user = localStorage.getItem("user")
+    // user login
+    if(user) {
+        axios.get("https://wil-backend-ocnh.vercel.app/api/campaign").then(res=>{
+            console.log(res)
+            const {data} = res
+            let campaign = document.querySelector("#campaign")
+                let campaignHTML = ''
+                data.campaigns.forEach(item =>{
+                    // console.log(item,campaigns)
+                    if(!campaigns.find((campaign)=>item._id === campaign)) return
+                    let temp = `
+                    <div class="image-container">
+                        <img class="image" src="image/${item.image}.jpg" alt="bear">
+                        <p class="imgtext">${item.description}</p>
+                    </div>
+                    `
+                    campaignHTML += temp
+                })
+                campaign.innerHTML = campaignHTML
+        })
+
+    } else {        // user not login
+        fetch("https://wil-backend-ocnh.vercel.app/api/campaign").then(res=>{
+            // console.log(res)
+            if(res.status===200) {
+                res.json().then(res=>{
+                    console.log('res--->', res)
+                    let campaign = document.querySelector("#campaign")
+                    let campaignHTML = ''
+                    res.campaigns.forEach(item =>{
+                        let temp = `
+                        <div class="image-container">
+                            <img class="image" src="image/${item.image}.jpg" alt="bear">
+                            <p class="imgtext">${item.description}</p>
+                        </div>
+                        `
+                        campaignHTML += temp
+                    })
+                    campaign.innerHTML = campaignHTML  
+                })
+            }
+           
+        })
+
+    }
+    
+})
+
+document.addEventListener("DOMContentLoaded", (ev)=>{
+    let blog = document.querySelector("#blog-share")
+    axios.get("https://wil-backend-ocnh.vercel.app/api/blog").then(res=>{
+        console.log("blog--->", res.data)
+        const {data} = res
+        
+        let tempHTML = ''
+        // let users = localStorage
+        data.blogs.forEach(item =>{
+            if(!blogs.find(blog =>item._id === blog)) return
+            tempHTML += `
+            <div class="header">
+                <img class="avatar" src="image/${['people','sdfier', 'shark','sunset','bear'].includes(item.image) ? item.image : 'sunset'}.png" alt="Avatar">
+                <div class="info">
+                    <h2>${name}</h2>
+                    <p>2 minuite ago</p>
+                </div>
+                </div>
+                <div class="content" id="blog-share">
+                    <p>${item.description} </p>
+                    <img class="image" src="image/sunset.png" alt="Image">
+                </div>
+                <div class="interactions">
+                    <div class="likes-comments-shares">
+                        <span class="heart">❤️&nbsp; &nbsp; 26</span>
+                        <p"><span>2</span> comments &nbsp;<span>1</span> share</p>
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <button class="blog-button2">👍React</button>
+                    <button class="blog-button2">🐱Comment</button>
+                    <button class="blog-button2">🐸Share</button>
+                </div>
+            `
+        })
+        blog.innerHTML = tempHTML
+        // console.log("res---->blog", res)
+        // if(res.status === 200) {
+        //     blogArr = res.data.blogs
+        //     if(blogArr.length) {
+        //         blog.innerHTML = `
+        //         <div class="header">
+        //             <img class="avatar" src="image/sunset.png" alt="Avatar">
+        //             <div class="info">
+        //                 <h2>user
+        //                 </h2>
+        //                 <p>2 minuite ago</p>
+        //             </div>
+        //         </div>
+        //         <div class="content" id="blog-share">
+        //             <p>${blogArr[0].description} </p>
+        //             <img class="image" src="image/sunset.png" alt="Image">
+        //         </div>
+        //         <div class="interactions">
+        //             <div class="likes-comments-shares">
+        //                 <span class="heart">❤️&nbsp; &nbsp; 26</span>
+        //                 <p"><span>2</span> comments &nbsp;<span>1</span> share</p>
+        //             </div>
+
+        //         </div>
+        //         <div class="buttons">
+        //             <button class="blog-button2">👍React</button>
+        //             <button class="blog-button2">🐱Comment</button>
+        //             <button class="blog-button2">🐸Share</button>
+        //         </div>
+        //         `
+
+        //     }
+        // }
+    })
+})
+
+let discard = document.querySelector("#discard")
+let post = document.querySelector("#post")
+let blogText = document.querySelector(".blog-textarea")
+post.addEventListener("click", (ev)=>{
+    console.log(ev)
+    ev.preventDefault()
+    let value = blogText.value
+    let user = localStorage.getItem('user')
+    let image = ['people','sdfier', 'shark','sunset','bear']
+    let random = Math.floor(Math.random() * image.length)
+    console.log(random)
+    axios.post("https://wil-backend-ocnh.vercel.app/api/blog/add",{
+        user,
+        title: name,
+        description: value,
+        image: image[random]
+    }).then(res=>{
+        // console.log(res)
+        axios.get("https://wil-backend-ocnh.vercel.app/api/user").then(res=>{
+            // console.log(res)
+            if(res.status === 200) {
+                localStorage.setItem("users",JSON.stringify(res.data.users))
+            }
+            location.reload()
+
+        })
+    })
+})
+
+
+    </script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>        
+        var mySwiper = new Swiper ('.swiper', {
+          loop: true, // 循环模式选项
+          
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          
+          // 如果需要前进后退按钮
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+        })        
+    </script>
 </html>

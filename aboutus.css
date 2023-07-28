@@ -23,7 +23,7 @@ body {
 
 .content {
     width: 80%;
-    margin: 30px auto;
+    margin: 0  auto;
 }
 
 .content h2 {
@@ -103,3 +103,4 @@ textarea {
     font-weight: bold;
     cursor: pointer;
 }
+
