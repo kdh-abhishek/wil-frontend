@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign up</title>
-        <link rel="stylesheet" href="signcss.css">
-    </head>
-    <body>
-        <div class="header">
-            <h1>O-Community</h1>
-        </div>
-        <div class="login-form">
-            <h2>Log in O-Community</h2>
-            <input type="text" id="email" placeholder="Email or Phone number">
-            <input type="password" id="password" placeholder="Password">
-            <button class="login-button" onclick="login()">Log in</button>
-            <a href="changepwd.html" class="forgot-account">Forgot your account?</a>
-            <div class="separator">
-                <span class="line"></span>
-                <span class="or">OR</span>
-                <span class="line"></span>
-            </div>
-            <br>
-            <button class="create-account-button" type="submit">Create Account</button>
-        </div>
 
-        <div id="successMessage" style="display: none;">
-            <h3>Login Successful!</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signcss.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>O-Community</h1>
+    </div>
+    <div class="login-form">
+        <h2>Log in O-Community</h2>
+        <input type="text" placeholder="Email or Phone number" class="account" id="account">
+        <input type="password" placeholder="Password" class="password" id="password">
+        <button class="login-button" id="login">Log in</button>
+        <a href="changepwd.html" class="forgot-account">Forgot your account?</a>
+        <div class="separator">
+            <span class="line"></span>
+            <span class="or">OR</span>
+            <span class="line"></span>
         </div>
-    
-        <script>
-            function login() {
-                var email = document.getElementById("email").value;
-                var password = document.getElementById("password").value;
-    
-                var data = {
-                    email: email,
-                    password: password
-                };
-    
-                fetch("http://localhost:5000/api/user/login", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Login failed");
-                    }
-                    alert('Login successful');
-                })
-                .catch(error => {
-                    alert("Login failed!! Please check your email and password and try again ");
-                    console.error(error);
-                });
+        <br>
+        <button class="create-account-button" type="submit">Create Account</button>
+    </div>
+</body>
+<script>
+    /**
+     * @param {string} selector
+    */
+    function $(selector) {
+        return document.querySelector(selector)
+    }
+    let account = $('#account')
+    let password = $('#password')
+    let login = $("#login")
+    let userArr = []
+    window.addEventListener("DOMContentLoaded", (ev) => {
+        let xhr = new XMLHttpRequest()
+        xhr.open("get", 'https://wil-backend-ocnh.vercel.app/api/user')
+        xhr.send()
+        xhr.onload = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status <= 300) {
+                    userArr = JSON.parse(xhr.response).users
+                    localStorage.setItem("users", JSON.stringify(userArr))
+                    console.log(userArr)
+                }
             }
-        </script>
-    </body>
+        }
+    })
+    login.addEventListener("click", () => {
+        let email = account.value
+        let pw = password.value
+        let res = false
+        console.log(email, pw)
+        if (email !== '' && pw !== '') {
+            let data = {
+                email: email,
+                password: pw
+            }
+            userArr.forEach((user, index) => {
+                if (email === user.email) {
+                    
+                    
+
+                    axios.post("https://wil-backend-ocnh.vercel.app/api/user/login",data).then(res=>{
+                        console.log(res)
+                        if(res.status===200) {
+                            let users = JSON.parse(localStorage.getItem("users"))
+                            localStorage.setItem("user",users.find(user => user.email === email)._id)
+                            alert("登录成功")
+                            // 跳转首页
+                            location.href = "/"
+                            return
+                        }   
+                    }).catch(err=>{
+                        console.log(err)
+                        alert("your account number or password error, pease try again~")
+                    })
+                }
+            })
+
+            
+        } else {
+            alert("Please enter your account number and password")
+        } 
+    })
+</script>
+
 </html>
